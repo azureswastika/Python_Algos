@@ -14,3 +14,49 @@
 Функцию random() использовать можно
 Опирайтесь на пример к уроку
 """
+from random import random
+
+while True:
+    try:
+        M1 = int(input())
+        break
+    except ValueError:
+        print('Попробуйте еще раз')
+while True:
+    try:
+        M2 = int(input())
+        break
+    except ValueError:
+        print('Попробуйте еще раз')
+N = int(random() * (M2 - M1 + 1)) + M1
+print(N)
+
+while True:
+    try:
+        M1 = float(input())
+        break
+    except ValueError:
+        print('Попробуйте еще раз')
+while True:
+    try:
+        M2 = float(input())
+        break
+    except ValueError:
+        print('Попробуйте еще раз')
+N = random() * (M2 - M1 +1) + M1
+print(round(N, 3))
+
+while True:
+    try:
+        M1 = ord(input())
+        break
+    except ValueError:
+        print('Попробуйте еще раз')
+while True:
+    try:
+        M2 = ord(input())
+        break
+    except ValueError:
+        print('Попробуйте еще раз')
+N = int(random() * (M2 - M1 + 1)) + M1
+print(chr(N))

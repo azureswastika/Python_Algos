@@ -10,3 +10,19 @@
 В обоих случаях программа должна вывести корректный результат.
 В обоих случаях он 24, но никак не -24
 """
+while True:
+    CHAR1 = input('Первая буква\n')
+    CHAR2 = input('Вторая буква\n')
+
+    if CHAR1.isupper() and CHAR2.isupper():
+        MIN = ord(CHAR1) - ord('A') + 1
+        MAX = ord(CHAR2) - ord('A') + 1
+        print(f'Буква {CHAR1} на {MIN} месте, а буква {CHAR2} на {MAX} месте')
+        print(f'Между буквами символов: {abs(MIN-MAX)}')
+    elif CHAR1.islower() and CHAR2.islower():
+        MIN = ord(CHAR1) - ord('a') + 1
+        MAX = ord(CHAR2) - ord('a') + 1
+        print(f'Буква {CHAR1} на {MIN} месте, а буква {CHAR2} на {MAX} месте')
+        print(f'Между буквами символов: {abs(MIN-MAX)}')
+    else:
+        print('Попробуйте еще раз')

@@ -8,3 +8,12 @@
 
 Подсказка: используйте ф-ции chr() и ord()
 """
+while True:
+    try:
+        USER_VAL = int(input('Введите число\n'))
+        break
+    except ValueError:
+        print('Попробуйте еще раз')
+
+X = ord('a') + USER_VAL - 1
+print(chr(X))
