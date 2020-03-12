@@ -7,17 +7,7 @@
 while True:
     try:
         A = int(input())
-        break
-    except ValueError:
-        print('Попробуйте еще раз')
-while True:
-    try:
         B = int(input())
-        break
-    except ValueError:
-        print('Попробуйте еще раз')
-while True:
-    try:
         C = int(input())
         break
     except ValueError:

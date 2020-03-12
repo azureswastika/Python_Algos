@@ -17,23 +17,8 @@ X1_VAL = 2, Y1_VAL = 3, X2_VAL = 4, Y2_VAL = 5
 while True:
     try:
         X1 = float(input('Введите значение X1\n'))
-        break
-    except ValueError:
-        print('Попробуйте еще раз')
-while True:
-    try:
         Y1 = float(input('Введите значение Y1\n'))
-        break
-    except ValueError:
-        print('Попробуйте еще раз')
-while True:
-    try:
         X2 = float(input('Введите значение X2\n'))
-        break
-    except ValueError:
-        print('Попробуйте еще раз')
-while True:
-    try:
         Y2 = float(input('Введите значение Y2\n'))
         break
     except ValueError:

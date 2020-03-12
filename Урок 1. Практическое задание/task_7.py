@@ -8,17 +8,7 @@
 while True:
     try:
         A = int(input('Сторона а\n'))
-        break
-    except ValueError:
-        print('Попробуйте еще раз')
-while True:
-    try:
         B = int(input('Сторона b\n'))
-        break
-    except ValueError:
-        print('Попробуйте еще раз')
-while True:
-    try:
         C = int(input('Сторона c\n'))
         break
     except ValueError:
