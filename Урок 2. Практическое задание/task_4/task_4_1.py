@@ -8,3 +8,13 @@
 
 ЗДЕСЬ ДОЛЖНА БЫТЬ РЕАЛИЗАЦИЯ ЧЕРЕЗ ЦИКЛ
 """
+try:
+    N = int(input())
+    NUM = 1
+    SUM = 0
+    for i in range(N):
+        SUM += NUM
+        NUM /= -2
+    print(f'Количество элементов - {N}, их сумма - {SUM}')
+except ValueError:
+    print('Попробуйте еще раз')

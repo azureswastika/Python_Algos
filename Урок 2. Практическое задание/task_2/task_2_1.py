@@ -12,3 +12,17 @@
 
 ЗДЕСЬ ДОЛЖНА БЫТЬ РЕАЛИЗАЦИЯ ЧЕРЕЗ ЦИКЛ
 """
+
+try:
+    N = int(input())
+    EVEN = 0
+    ODD = 0
+    while N > 0:
+        if N % 2 == 0:
+            EVEN += 1
+        else:
+            ODD += 1
+        N = N // 10
+    print(f'Четных - {EVEN}, нечетных - {ODD}')
+except ValueError:
+    print('Попробуйте еще раз')

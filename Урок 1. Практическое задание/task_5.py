@@ -23,6 +23,6 @@ elif CHAR1.islower() and CHAR2.islower():
     MIN = ord(CHAR1) - ord('a') + 1
     MAX = ord(CHAR2) - ord('a') + 1
     print(f'Буква {CHAR1} на {MIN} месте, а буква {CHAR2} на {MAX} месте')
-    print(f'Между буквами символов: {abs(MIN-MAX)}')
+    print(f'Между буквами символов: {abs(MIN-MAX) - 1}')
 else:
     print('Попробуйте еще раз')

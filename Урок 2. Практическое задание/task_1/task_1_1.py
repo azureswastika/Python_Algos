@@ -32,3 +32,27 @@
 
 ЗДЕСЬ ДОЛЖНА БЫТЬ РЕАЛИЗАЦИЯ ЧЕРЕЗ ЦИКЛ
 """
+
+while True:
+    try:
+        SYMB = input('Знак\n')
+        if SYMB in ['*', '/', '+', '-']:
+            X = float(input('Первое число\n'))
+            Y = float(input('Второе число\n'))
+            if SYMB == '+':
+                print(X + Y)
+            elif SYMB == '-':
+                print(X - Y)
+            elif SYMB == '*':
+                print(X * Y)
+            elif SYMB == '/':
+                try:
+                    print(X / Y)
+                except ZeroDivisionError:
+                    print('Ошибка! Деление на ноль')
+        elif SYMB == '0':
+            break
+        else:
+            print('Неверный знак')
+    except ValueError:
+        print('Попробуйте снова')

@@ -14,3 +14,16 @@
 
 ЗДЕСЬ ДОЛЖНА БЫТЬ РЕАЛИЗАЦИЯ ЧЕРЕЗ РЕКУРСИЮ
 """
+
+def recursive(n_val, m_val):
+    """Вызов рекурсии"""
+    if n_val > 0:
+        recursive(n_val // 10, m_val * 10 + n_val % 10)
+    else:
+        print(m_val)
+
+try:
+    N = int(input('Введите число\n'))
+    recursive(N, 0)
+except ValueError:
+    print('Попробуйте еще раз')

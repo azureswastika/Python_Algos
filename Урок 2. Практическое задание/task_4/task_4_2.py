@@ -8,3 +8,18 @@
 
 ЗДЕСЬ ДОЛЖНА БЫТЬ РЕАЛИЗАЦИЯ ЧЕРЕЗ РЕКУРСИЮ
 """
+
+def recursive_ex(n_val, rec_count, num, summ):
+    """Вызов рекурсии"""
+    if n_val > 0:
+        summ += num
+        num /= -2
+        recursive_ex(n_val - 1, rec_count + 1, num, summ)
+    else:
+        print(f'Количество элементов - {rec_count}, их сумма - {summ}')
+
+try:
+    N = int(input())
+    recursive_ex(N, 0, 1, 0)
+except ValueError:
+    print('Попробуйте еще раз')
