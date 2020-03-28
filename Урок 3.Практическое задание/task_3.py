@@ -11,3 +11,22 @@
 6 позиции, а минимальное число  -49 стоит на    0 позиции
 [-49, 26, 41, 75, 23, 52, 88, 60, 69, -18]
 """
+
+from random import randint
+
+N = [randint(-100, 100) for i in range(randint(5, 15))]
+MAX_NUM = N.index(max(N))
+MIN_NUM = N.index(min(N))
+print(f'''В данном массиве чисел максимальное число {max(N)} стоит на {MAX_NUM} позиции,
+а минимальное число {min(N)} стоит на {MIN_NUM} позиции
+Заменяем их
+{N}''')
+
+if MAX_NUM < MIN_NUM:
+    N[MIN_NUM], N[MAX_NUM] = N[MAX_NUM], N[MIN_NUM]
+else:
+    N[MAX_NUM], N[MIN_NUM] = N[MIN_NUM], N[MAX_NUM]
+
+print(f'''В данном массиве чисел максимальное число {max(N)} стоит на {MIN_NUM} позиции,
+а минимальное число {min(N)} стоит на {MAX_NUM} позиции''')
+print(N)
