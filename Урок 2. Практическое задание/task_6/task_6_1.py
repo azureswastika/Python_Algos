@@ -7,3 +7,27 @@
 
 ЗДЕСЬ ДОЛЖНА БЫТЬ РЕАЛИЗАЦИЯ ЧЕРЕЗ ЦИКЛ
 """
+
+from random import randint
+
+ATTEMPTS = 1
+RAND_NUMB = randint(0, 100)
+
+while True:
+    try:
+        if ATTEMPTS != 0:
+            USER_VAL = int(input('Выберите число\n'))
+            if USER_VAL > RAND_NUMB:
+                ATTEMPTS -= 1
+                print('Ваше число больше загаданного')
+            elif USER_VAL < RAND_NUMB:
+                ATTEMPTS -= 1
+                print('Ваше число меньше загаданного')
+            else:
+                print(f'Выугадали! Загаданное число - {RAND_NUMB}')
+                break
+        else:
+            print(f'Вы не угадали, загаданное число - {RAND_NUMB}')
+            break
+    except ValueError:
+        print('Неправильный значение')

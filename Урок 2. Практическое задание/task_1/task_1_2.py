@@ -33,3 +33,38 @@
 
 ЗДЕСЬ ДОЛЖНА БЫТЬ РЕАЛИЗАЦИЯ ЧЕРЕЗ РЕКУРСИЮ
 """
+
+def recursive_ex():
+    """Вызов рекурсии"""
+    symb = input('Знак\n')
+
+    if symb in ['+', '-', '*', '/']:
+        try:
+            x_val = float(input('Первое число\n'))
+            y_val = float(input('Второе число\n'))
+            simple_math(symb, x_val, y_val)
+        except ValueError:
+            print('Ошибка! Попробуйте еще раз')
+            recursive_ex()
+    elif symb == '0':
+        pass
+    else:
+        print('Ошибка! Попробуйте еще раз')
+        recursive_ex()
+
+def simple_math(symb, x_val, y_val):
+    """Вычисление"""
+    if symb == '+':
+        print(x_val + y_val)
+    elif symb == '-':
+        print(x_val - y_val)
+    elif symb == '*':
+        print(x_val * y_val)
+    else:
+        try:
+            print(x_val / y_val)
+        except ZeroDivisionError:
+            print('Ошибка! Деление на ноль')
+    recursive_ex()
+
+recursive_ex()

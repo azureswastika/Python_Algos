@@ -36,3 +36,20 @@
 [3, 3, 3, 3, 12]
 [3, 3, 3, 3, 12]
 """
+
+try:
+    MATRIX = []
+    for i in range(1, 6):
+        LIST = []
+        SUM = 0
+        print(f'{i}-я строка: ')
+        for x in range(1, 5):
+            NUM = int(input())
+            LIST.append(NUM)
+            SUM += NUM
+        LIST.append(SUM)
+        MATRIX.append(LIST)
+    for i in MATRIX:
+        print(i)
+except ValueError:
+    print('Попробуйте еще раз')

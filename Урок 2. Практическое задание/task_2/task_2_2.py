@@ -15,3 +15,19 @@
 
 ЗДЕСЬ ДОЛЖНА БЫТЬ РЕАЛИЗАЦИЯ ЧЕРЕЗ РЕКУРСИЮ
 """
+
+def recursive_ex(n_val, even, odd):
+    """Вызов рекурсии"""
+    if n_val > 0:
+        if n_val % 2 == 0:
+            recursive_ex(n_val // 10, even + 1, odd)
+        else:
+            recursive_ex(n_val // 10, even, odd + 1)
+    else:
+        print(f'Четных - {even}, нечетных - {odd}')
+
+try:
+    N = int(input())
+    recursive_ex(N, 0, 0)
+except ValueError:
+    print('Попробуйте еще раз')
