@@ -25,3 +25,28 @@
 
 Предприятия, с прибылью ниже среднего значения: Копыта
 """
+
+from collections import defaultdict
+
+ORG_COUNT = int(input('Введите количество предприятий для расчета прибыли: '))
+D = defaultdict(list)
+for i in range(ORG_COUNT):
+    ORG_NAME = input('Введите название предприятия: ')
+    ORG_PROFIT = [int(a) for a in input('Через пробел введите прибыль данного предприятия за каждый квартал(Всего 4 квартала): ').split()]
+    D[ORG_NAME] += (ORG_PROFIT)
+
+ORG_SAL = 0
+for key, value in D.items():
+    ORG_SAL += sum(value)
+ORG_SAL = ORG_SAL / ORG_COUNT
+
+HIGH_ORG = []
+LOW_ORG = []
+for key, value in D.items():
+    if sum(value) > ORG_SAL:
+        HIGH_ORG += key
+    else:
+        LOW_ORG += key
+print(f'Средняя годовая прибыль всех предприятий: {ORG_SAL}')
+print(f'Предприятия, с прибылью выше среднего значения: {", ".join(HIGH_ORG)}')
+print(f'Предприятия, с прибылью ниже среднего значения: {", ".join(LOW_ORG)}')
